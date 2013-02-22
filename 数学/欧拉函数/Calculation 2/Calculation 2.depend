@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1345626306 source:c:\users\peter\desktop\calculation 2\main.cpp
+	<iostream>
+	<cstdio>
+
