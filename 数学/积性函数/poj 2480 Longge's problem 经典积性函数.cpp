@@ -6,12 +6,13 @@
     积性函数的和还是积性函数。
     所以
     f(n) = sigma( gcd(i,n) )也是积性函数
-    f(n) = sigma( d* ph(n/d) ),i = d|n
+	f(n) = f(p1^k1 * ... * pm^km) = f(p1^k1) * f(p2^k2) *...* f(pm^km)
+    又因为
+	f(n) = sigma( d* phi(n/d) ),i = d|n
     所以可以化为
-    f(n) = f(p1^k1) * f(p2^k2) *...* f(pm^km)
-    f(p^k) = sigma( p^i * ph( p^(k-i) ) )
+    f(p^k) = sigma( p^i * phi( p^(k-i) ) )
     而
-    ph(p^k) = p^k-p^(k-1)
+    phi(p^k) = p^k-p^(k-1)
     所以问题得以解决
 
 */
