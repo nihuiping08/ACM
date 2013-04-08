@@ -64,10 +64,6 @@ void add(int x,int y,int f){
     Add(y,x,0);
 }
 
-int Abs(int x){
-    return max(x,-x);
-}
-
 int sap(){
     memset(dis,0,sizeof(dis));
     memset(gap,0,sizeof(gap));
