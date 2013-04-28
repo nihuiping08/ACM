@@ -47,7 +47,7 @@ void dfs(int x){
 }
 
 int main(){
-	//freopen("sum.txt","r",stdin);
+	freopen("sum.in","r",stdin);
 	int m;
 	int id[X];
 	while(cin>>m){
@@ -69,7 +69,7 @@ int main(){
 				x = i;
 				cnt ++;
 			}
-		
+
 		if(cnt&&cnt!=2){
 			puts("No solution");
 			continue;
@@ -80,7 +80,7 @@ int main(){
 				x = i;
 				break;
 			}
-		
+
 		memset(use,false,sizeof(use));
 		is_uler(x);
 		//cout<<x<<endl;
