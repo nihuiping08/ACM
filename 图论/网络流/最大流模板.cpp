@@ -27,7 +27,7 @@ const int INF = 1e9;
 
 int po[MAXN],tol;
 int gap[MAXN],dis[MAXN],arc[MAXN],pre[MAXN],cur[MAXN];
-int n,m,s,t,d;
+int n,m,s,t;
 
 struct node{
     int y,f,next;
