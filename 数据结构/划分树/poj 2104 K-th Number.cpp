@@ -48,8 +48,7 @@ int n,m,sorted[maxm];
 int toleft[maxn][maxm];
 int data[maxn][maxm];
 
-void build(int l,int r,int depth)
-{
+void build(int l,int r,int depth){
     if(l==r)
         return;
 
@@ -63,11 +62,9 @@ void build(int l,int r,int depth)
             ls--;
 
     int ok;
-    for(int i=l;i<=r;i++)
-    {
+    for(int i=l;i<=r;i++){
         ok = 0;
-        if(data[depth][i]<sorted[mid]||(data[depth][i]==sorted[mid]&&ls>0))
-        {
+        if(data[depth][i]<sorted[mid]||(data[depth][i]==sorted[mid]&&ls>0)){
             ok = 1;
             data[depth+1][lp++] = data[depth][i];
             if(data[depth][i]==sorted[mid])
@@ -81,8 +78,7 @@ void build(int l,int r,int depth)
     build(mid+1,r,depth+1);
 }
 
-int query(int left,int right,int k,int l,int r,int depth)
-{
+int ask(int left,int right,int k,int l,int r,int depth){
     if(left==right)
         return data[depth][left];
     int mid = (l+r)>>1;
@@ -93,28 +89,24 @@ int query(int left,int right,int k,int l,int r,int depth)
     int cnt = y-x;      //[left,right]区间内放到左子树中的个数
 
     if(cnt>=k)
-        return query(l+x,l+y-1,k,l,mid,depth+1);
+        return ask(l+x,l+y-1,k,l,mid,depth+1);
     else
-        return query(mid+rx+1,mid+ry+1,k-cnt,mid+1,r,depth+1);
+        return ask(mid+rx+1,mid+ry+1,k-cnt,mid+1,r,depth+1);
 }
 
-int main()
-{
+int main(){
     freopen("sum.in","r",stdin);
     int l,r,k;
-    while(scanf("%d%d",&n,&m)!=EOF)
-    {
-        for(int i=1;i<=n;i++)
-        {
+    while(scanf("%d%d",&n,&m)!=EOF){
+        for(int i=1;i<=n;i++){
             scanf("%d",&data[0][i]);
             sorted[i] = data[0][i];
         }
         sort(sorted+1,sorted+n+1);
         build(1,n,0);
-        while(m--)
-        {
+        while(m--){
             scanf("%d%d%d",&l,&r,&k);
-            printf("%d\n",query(l,r,k,1,n,0));
+            printf("%d\n",ask(l,r,k,1,n,0));
         }
     }
     return 0;
