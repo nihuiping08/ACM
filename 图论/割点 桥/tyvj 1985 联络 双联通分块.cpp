@@ -74,9 +74,7 @@ void bridge_dfs(int u, int v)
             bridge_dfs(w,u);
             low[u] = min(low[u],low[w]);
             if(!(low[w] > dfn[u]))       //²»ÊÇÇÅ£¬Ëõµã
-            {
                 Union(w,u);
-            }
             else
             {
                 bridge[++bridge_n][0] = u;
