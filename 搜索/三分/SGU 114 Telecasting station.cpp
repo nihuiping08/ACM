@@ -63,7 +63,7 @@ int main(){
     l = 0,r = 1;
     double ans = 1e15;
     double pos = 0;
-    rep(step,1000){ // 迭代次数为1000
+    rep(step,1000){ // 浮点数建议以迭代次数为1000替代判断边界相等
         double M1 = (2*l+r)/3;
         double M2 = (l+2*r)/3;
         double x1 = M1*L+(1-M1)*R;
