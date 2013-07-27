@@ -54,7 +54,7 @@ void LIS(){
         }else{
             int l = 1;
             int r = top;
-            int ans = 0;
+            int ans = 1;
             while(l<=r){
                 int mid = (l+r)/2;
                 if(dp[mid]>a[i]){
@@ -74,13 +74,13 @@ void DEC(){
     dp[++top] = a[n];
     dc[n] = 1;
     for(int i=n-1;i;i--){
-        if(a[i]<=dp[top]){
+        if(a[i]<dp[top]){
             dp[++top] = a[i];
             dc[i] = top;
         }else{
             int l = 1;
             int r = top;
-            int ans = 0;
+            int ans = 1;
             while(l<=r){
                 int mid = (l+r)/2;
                 if(dp[mid]<a[i]){
@@ -117,6 +117,7 @@ int main(){
             RD(a[i]);
         LIS();
         DEC();
+
 
         /*
         rep1(i,n)
