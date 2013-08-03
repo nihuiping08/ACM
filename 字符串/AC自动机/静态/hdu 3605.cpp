@@ -1,3 +1,11 @@
+/*
+
+目标中模式串出现多少次	
+
+ac自动机简单题
+把出现过的标记为true，下一次不在统计
+
+*/
 #include <set>
 #include <map>
 #include <list>

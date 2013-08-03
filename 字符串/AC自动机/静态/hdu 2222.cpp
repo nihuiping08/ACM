@@ -1,3 +1,10 @@
+/*
+
+简单统计文本串中出现病毒的数目	
+
+ac自动机模板
+
+*/
 #include <set>
 #include <map>
 #include <list>

@@ -1,3 +1,10 @@
+/*
+
+目标串中出现多少个模式串	
+
+ac自动机简单题
+
+*/
 #include <set>
 #include <map>
 #include <list>
@@ -77,14 +84,9 @@ struct AC{
 
     void build(){
         queue<int> q;
-        fail[0] = 0;
         rep(c,kind){
             int x = ch[0][c];
-            if(x){
-                fail[0] = 0;
-                last[x] = 0;
-                q.push(x);
-            }
+            if(x) q.push(x);
         }
         while(!q.empty()){
             int r = q.front();
