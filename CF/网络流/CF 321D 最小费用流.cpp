@@ -6,9 +6,10 @@
    * Y的position为Attack，那么必须有(X's strength) >= (Y's strength)，
 	Jiro获得伤害(X's strength)-(Y's strength)，手牌Y不可以再用
    * Y的position为Defense，那么必须有(X's strength) > (Y's strength)，
-	Jiro没有伤害，手牌Y不可以再用	最小费用流or贪心。
+	Jiro没有伤害，手牌Y不可以再用	
+	
+最小费用流or贪心。
 
-   
 最小费用流分两种情况：
 不全部耗尽Jiro的手牌时，直接对于图建边即可，需要把Ciel的所有手牌连上汇点。
 全部耗尽Jiro的手牌时，需要建立虚拟的节点表示Jiro的手牌，表示题目描述中的第2种情况。
