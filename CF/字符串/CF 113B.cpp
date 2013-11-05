@@ -85,7 +85,7 @@ int main(){
 
         vector<ll> vec;
         rep(i,len){
-            if( int(i+a.size())>len)break;
+            if( int(i+a.size())>len )break;
             if( cc(i,i+a.size())!=x )continue;
             for(int j=i;j<len;j++){
                 if( int(j+b.size())>len)break;
